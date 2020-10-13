@@ -1,12 +1,25 @@
 <?php
 
+/**
+ * @author Daniel Pérez
+ * @copyright Copyright(c) 2020 Daniel Pérez
+ * @license https://www.gnu.org/licenses/gpl.txt
+ */
 /*
- * Esto es sólo un ESQUELETO para el ejercicio de la "distancia Hamming".
+ * Este programa calcula la distancia Hamming entre dos cadenas.
  */
 
 function distancia($a, $b)
 {
-    //
-    // TU CÓDIGO VA AQUÍ
-    //
+    if (mb_strlen($a) != mb_strlen($b)){
+        return false;
+    }
+        
+    $acc = 0;
+    for($i = 0; $i < mb_strlen($a); $i++) {
+        if ($a[$i] != $b[$i]){
+         $acc++;
+    }
+}
+    return $acc;
 }
